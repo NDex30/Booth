@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Booth Example</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta http-equiv="Content-Language" content="en" />
+    <link href="css/booth.css" type="text/css" rel="stylesheet">
+    <link href="css/app.css" type="text/css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <div id="content-wrap" class="booth-content">
+        <div class="center-box">
+          <div class="menu-button-wrap menu-button-left">
+            <button id="left-menu-button" class="menu-button booth-menu-button" data-booth-options="{location: left,contentid: content-wrap, closebtnid: left-close-button, menuwrapid: left-menu-wrap}">LEFT</button>
+          </div>
+          <div class="menu-button-wrap menu-button-right">
+            <button id="right-menu-button" class="menu-button booth-menu-button" data-booth-options="{location: right,contentid: content-wrap, closebtnid: right-close-button, menuwrapid: right-menu-wrap}">RIGHT</button>
+          </div>
+        </div>
+      </div>
+      <div id="left-menu-wrap" class="booth-menu booth-menu-left" style="visibility: hidden;">
+        <nav class="menu">
+          <div class="icon-list">
+            <div class="drillz-container" id="dmenu-left">
+              <nav class="drillz-menu">
+                <ul class="drills-top-level">
+                  <li class="nav-link"><a href="#">Help</a></li>
+                  <li class="nav-link"><a href="#">Contact us</a></li>
+                  <li class="nav-link"><a href="#">About our site</a></li>
+                  <li class="nav-link"><a href="#">Terms &amp; Conditions</a></li>
+                  <li class="nav-link"><a href="#">Privacy statement</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </nav>
+        <button id="left-close-button" class="booth-close-button">Close Menu</button>
+      </div>
+      <div id="right-menu-wrap" class="booth-menu booth-menu-right" style="visibility: hidden;">
+        <nav class="menu">
+          <div class="icon-list">
+            <div class="drillz-container" id="dmenu-right">
+              <nav class="drillz-menu">
+                <ul class="drills-top-level">
+                  <li class="nav-link"><a href="#">Help</a></li>
+                  <li class="nav-link"><a href="#">Contact us</a></li>
+                  <li class="nav-link"><a href="#">About our site</a></li>
+                  <li class="nav-link"><a href="#">Terms &amp; Conditions</a></li>
+                  <li class="nav-link"><a href="#">Privacy statement</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </nav>
+        <button id="right-close-button" class="booth-close-button">Close Menu</button>
+      </div>
+    </div>
+    <script type="text/javascript" src="js/booth.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+  </body>
+</html>

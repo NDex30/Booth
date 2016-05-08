@@ -1,0 +1,41 @@
+html, body, .container, .content-wrap { height: 100%; width: 100%; margin: 0; padding: 0; max-width: none; }
+*, *::after, *::before { box-sizing: border-box; }
+.row.width-100 { max-width: none; width: 100%; }
+a { color: #4e4a46; outline: medium none; text-decoration: none; }
+body { font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; font-weight: 300; }
+
+#left-menu-wrap.booth-menu { background: transparent url("../images/space_shuttle_launch.jpg") no-repeat scroll center center / 100% 100%; padding: 0; margin: 0; }
+#left-menu-wrap.booth-menu nav.menu { background: rgba(0,0,0,0.7); padding: 2.5rem 1rem 0; overflow: auto; }
+#left-menu-wrap .booth-close-button { height: 2rem; width: 2rem; }
+#left-menu-wrap .booth-close-button::before, #left-menu-wrap .booth-close-button::after { width: 7px; }
+nav .icon-list ul { list-style: none; margin: 0; padding: 0; }
+#left-menu-wrap.booth-menu .menu.is-drilldown-submenu { background: rgba(0, 0, 0, 1) none repeat scroll 0 0; }
+
+#right-menu-wrap .booth-close-button {
+  left: 1rem;
+}
+
+.center-box {
+  display: block;
+  margin: 4rem auto 0;
+  max-width: 600px;
+  padding: 1rem;
+  position: relative;
+}
+.menu-button-wrap {
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+  width: 300px;
+}
+.menu-button.booth-menu-button {
+  background: #8f2a7d none repeat scroll 0 0;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 2.25rem;
+  margin: 1rem auto 0;
+  padding: 0.75rem 1.5rem;
+  width: 300px;
+}
