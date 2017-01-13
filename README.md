@@ -24,5 +24,5 @@ Booth is a simple library for creating slide objects that can work off the scree
 ```
 ### Create action element
 ```HTML
-<button id="left-menu-button" class="menu-button booth-menu-button" data-booth-options="{location: left,contentid: content-wrap, closebtnid: left-close-button, menuwrapid: left-menu-wrap}">LEFT</button>
+<button id="left-menu-button" class="menu-button booth-menu-button" data-booth-options="{location: left,contentid: content-wrap, closebtnid: left-close-button, menuwrapid: left-menu-wrap}">Open</button>
 ```
