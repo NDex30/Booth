@@ -1,7 +1,9 @@
 # Booth
 ## Introduction
 Booth is a simple library for creating slide objects that can work off the screen.
-* Demo [https://ndex30.github.io/projects/booth/]
+
+* [Demo](https://ndex30.github.io/projects/booth/)
+
 ## Markup
 ### Assign class to content area to be shifted
 ```html
