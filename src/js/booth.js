@@ -3,29 +3,51 @@
  * Javascript library to easily do offcanvas menus
  */
 window.Booth = function(el, options) {
+  el = document.getElementById(el);
   this.openbtn = el;
   this.options = this.extend( {}, this.options );
-  var tmp = el.getAttribute('data-booth-options').replace(/[{}]/g, "").split(',');
-  if(tmp.length > 0){
-    for(x in tmp){
-      var s = tmp[x].split(':');
-      this.options[s[0].trim()] = s[1].trim();
+  var tmp = el.getAttribute('data-booth-options');
+  if(tmp != null){
+    tmp = tmp.replace(/[{}]/g, "").split(',');
+    if(tmp.length > 0){
+      for(x in tmp){
+        var s = tmp[x].split(':');
+        this.options[s[0].trim()] = s[1].trim();
+      }
     }
   }
   this.extend( this.options, options );
   this.bodyEl = document.body;
-  this.mainContent = document.getElementById( this.options.contentid );
-  this.closebtn = document.getElementById( this.options.closebtnid );
-  this.menuWrap = document.getElementById( this.options.menuwrapid )
+  if(this.options.contentid != null){
+    this.mainContent = document.getElementById( this.options.contentid );
+  }else{
+    var tmpMc = document.getElementsByClassName('booth-content');
+    if(tmpMc.length > 0)
+      this.mainContent = tmpMc[0];
+  }
+  if(this.options.menuwrapid != null){
+    this.menuWrap = document.getElementById( this.options.menuwrapid );
+  }else{
+    var tmpMw = document.getElementsByClassName('booth-menu');
+    if(tmpMw.length > 0)
+      this.menuWrap = tmpMw[0];
+  }
+  if(this.options.closebtnid != null){
+    this.closebtn = document.getElementById( this.options.closebtnid );
+  }else{
+    var tmpCb = this.menuWrap.getElementsByClassName('booth-close-button');
+    if(tmpCb.length > 0)
+      this.closebtn = tmpCb[0];
+  }
   this.isOpen = false;
   this.init();
 };
 window.Booth.prototype.options = {
 	location: 'left',
 	slideType : 'ease',
-  contentid: 'content-wrap',
-  closebtnid: 'close-button',
-  menuwrapid: 'menu-wrap',
+  contentid: null,
+  closebtnid: null,
+  menuwrapid: null,
 	speed : 300,
   clickWait: 500,
 };

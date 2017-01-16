@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta http-equiv="Content-Language" content="en" />
+    <title>Booth Example</title>
+    <link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link href="../src/css/booth.css" type="text/css" rel="stylesheet" />
+    <style type="text/css">
+      html, body, .container, .content-wrap { height: 100%; width: 100%; margin: 0; padding: 0; max-width: none; }
+      *, *::after, *::before { box-sizing: border-box; }
+      .width-100 { max-width: none; width: 100%; }
+      .flex-row {	display: flex; flex-flow: row nowrap;	align-items: center; justify-content: center; }
+      .flex-row > div {	flex-grow: 1;	flex-shrink: 1; }
+      .flex-row .flex-col-2 {	flex-grow: 0;	flex-shrink: 1;	width: 10%; }
+      .action-button { text-align: center; }
+      .action-button .material-icons { cursor: pointer; margin: 0 auto; }
+      p {	padding: 0 1rem; }
+      .booth-menu h3 { color: #FFF; }
+      .booth-menu ul { list-style: none; padding: 0; margin: 0; }
+      .booth-menu a { text-decoration: none; margin: 0.35rem 0; display: block; }
+    </style>
+  </head>
+  <body>
+    <div id="content" class="booth-content">
+      <div class="flex-row">
+        <div class="flex-col-2 action-button"><i id="left-menu-button" class="material-icons">menu</i></div>
+        <div><h1>Booth Content</h1></div>
+        <div class="flex-col-2 action-button"><i id="right-menu-button" data-booth-options="{location: right,contentid: content, closebtnid: right-close-button, menuwrapid: right-menu-wrap}"class="material-icons">menu</i></div>
+      </div>
+      <p>
+        Kombucha +1 irony fixie man bun, austin slow-carb lyft brooklyn green juice try-hard tumeric. Flannel literally asymmetrical, master cleanse you probably haven't heard of them ethical vice lo-fi letterpress cred locavore semiotics glossier cold-pressed. Gentrify kinfolk truffaut hot chicken swag organic, unicorn trust fund meggings mumblecore kogi slow-carb wolf gochujang. Chicharrones pour-over you probably haven't heard of them truffaut gentrify, whatever bushwick photo booth. Ramps polaroid poutine, church-key yr four loko truffaut mustache jean shorts scenester aesthetic live-edge squid kickstarter vinyl. Squid mixtape pop-up lomo activated charcoal iceland. Helvetica listicle snackwave pug, paleo succulents mlkshk 8-bit cold-pressed put a bird on it lo-fi cred pour-over DIY.
+      </p>
+      <p>
+Pug wayfarers kombucha, squid pitchfork semiotics kale chips tumblr tousled post-ironic irony glossier mixtape. PBR&amp;B readymade everyday carry copper mug typewriter art party. Meditation letterpress roof party, succulents dreamcatcher tumblr pickled. Chicharrones affogato man bun ethical, cold-pressed kitsch yuccie wayfarers tote bag marfa. Street art taxidermy gastropub, distillery kinfolk raclette 90's synth. Vice jianbing disrupt, health goth lumbersexual bespoke microdosing mixtape dreamcatcher butcher cred occupy. Slow-carb art party activated charcoal, single-origin coffee occupy edison bulb austin ugh DIY green juice butcher locavore lumbersexual.
+</p>
+<p>
+Gentrify organic kale chips cliche. 8-bit normcore master cleanse keytar 3 wolf moon jianbing gentrify, viral succulents tousled. Tumeric asymmetrical meggings hashtag enamel pin occupy mixtape, salvia normcore mustache sustainable migas chambray. Dreamcatcher asymmetrical butcher, pop-up shabby chic hell of neutra freegan jianbing snackwave waistcoat four loko williamsburg chia. Chia chartreuse austin, hammock single-origin coffee butcher sartorial yuccie. Occupy selfies meditation, synth tumblr chicharrones brooklyn kogi af hell of. Sriracha godard disrupt meggings quinoa dreamcatcher.
+      </p>
+      <p>
+Gochujang pour-over YOLO meggings normcore glossier hella, green juice +1. Messenger bag man braid green juice waistcoat kickstarter, chillwave fingerstache marfa activated charcoal umami yr. Lyft four dollar toast stumptown taxidermy mustache, selvage pour-over plaid lo-fi man braid +1 vegan flexitarian mumblecore. Chillwave roof party direct trade, pour-over keytar meggings cornhole. Locavore poke cray raw denim, pickled whatever fap prism flannel. Meditation keytar pug whatever, hella authentic plaid vaporware man braid vegan vape. 3 wolf moon godard freegan stumptown irony.
+      </p>
+    </div>
+    <div id="left-menu-wrap" class="booth-menu booth-menu-left">
+      <nav>
+        <h3>Left Booth Menu</h3>
+        <ul>
+          <li><a href="#">Menu Item 1</a></li>
+          <li><a href="#">Menu Item 2</a></li>
+        </ul>
+      </nav>
+      <button id="left-close-button" class="booth-close-button">Close Menu</button>
+    </div>
+    <div id="right-menu-wrap" class="booth-menu booth-menu-right">
+      <nav>
+        <h3>Right Booth Menu</h3>
+        <ul>
+          <li><a href="#">Menu Item 1</a></li>
+          <li><a href="#">Menu Item 2</a></li>
+        </ul>
+      </nav>
+      <button id="right-close-button" class="booth-close-button">Close Menu</button>
+    </div>
+  <script type="text/javascript" src="../src/js/booth.js"></script>
+  <script type="text/javascript">
+    if(typeof(Booth) !== "undefined"){
+      var menuLeft = new Booth('left-menu-button', {});
+      var menuRight = new Booth('right-menu-button', {});
+    }
+  </script>
+</body>
+</html>

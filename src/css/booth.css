@@ -26,6 +26,7 @@
 .booth-content-bottom.booth-active { transform: translate3d(0px, -100px, 0px); -webkit-transform: translate3d(0px, -100px, 0px); }
 .booth-content-top { }
 .booth-content-bottom { }
+/*
 .booth-menu.booth-menu-left .menu,.booth-menu.booth-menu-left .icon-list,.booth-menu.booth-menu-right .menu, .booth-menu.booth-menu-right .icon-list { height: 100%; }
 .booth-active.booth-menu-left .icon-list, .booth-active.booth-menu-left .icon-list a, .booth-active.booth-menu-right .icon-list, .booth-active.booth-menu-right  .icon-list a { transform: translate3d(0px, 0px, 0px); -webkit-transform: translate3d(0px, 0px, 0px); transition: transform 0.8s cubic-bezier(0.7, 0, 0.3, 1) 0s; -webkit-transition: transform 0.8s cubic-bezier(0.7, 0, 0.3, 1) 0s; }
 .booth-menu.booth-menu-left .icon-list, .booth-menu.booth-menu-left .icon-list a, .booth-menu.booth-menu-right .icon-list, .booth-menu.booth-menu-right .icon-list a { transition: transform 0s cubic-bezier(0.7, 0, 0.3, 1) 0.4s; -webkit-transition: transform 0s cubic-bezier(0.7, 0, 0.3, 1) 0s; }
@@ -38,3 +39,9 @@
 .booth-active.booth-menu-left .icon-list a, .booth-active.booth-menu-right .icon-list a { transition-duration: 0.9s; }
 .booth-active.booth-menu-left .icon-list a span, .booth-active.booth-menu-right .icon-list a span { font-weight: 700; margin-left: 10px; }
 .booth-active.booth-menu-left .icon-list a:hover, .booth-active.booth-menu-right .icon-list a:hover { color: #dddddd; }
+*/
+/* New Slide Up */
+.booth-menu > div, .booth-menu > nav { transform: translate3d(0px, 100%, 0px); -webkit-transform: translate3d(0px, 100%, 0px); height: 100%; transition: transform 0s cubic-bezier(0.7, 0, 0.3, 1) 0.4s; -webkit-transition: transform 0s cubic-bezier(0.7, 0, 0.3, 1) 0s; color: #b8b7ad; transition-duration: 0.9s; }
+.booth-menu.booth-active > div, .booth-menu.booth-active > nav { transform: translate3d(0px, 0px, 0px); -webkit-transform: translate3d(0px, 0px, 0px); transition: transform 0.8s cubic-bezier(0.7, 0, 0.3, 1) 0s; -webkit-transition: transform 0.8s cubic-bezier(0.7, 0, 0.3, 1) 0s; }
+.booth-menu a { display: block; padding: 0.8em; transform: translate3d(0px, 500px, 0px); -webkit-transform: translate3d(0px, 500px, 0px); transition: transform 0s cubic-bezier(0.7, 0, 0.3, 1) 0.4s; -webkit-transition: transform 0s cubic-bezier(0.7, 0, 0.3, 1) 0s; color: #b8b7ad; }
+.booth-active.booth-menu a { transform: translate3d(0px, 0px, 0px); -webkit-transform: translate3d(0px, 0px, 0px); transition: transform 0.8s cubic-bezier(0.7, 0, 0.3, 1) 0s; -webkit-transition: transform 0.8s cubic-bezier(0.7, 0, 0.3, 1) 0s; transition-duration: 0.9s; }
