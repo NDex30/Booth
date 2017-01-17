@@ -1,6 +1,11 @@
 /*
- * Booth JS
- * Javascript library to easily do offcanvas menus
+  Booth JS
+ Version: 0.1.1
+  Author: NDex30
+ Website: https://ndex30.github.io/
+    Docs: https://github.com/NDex30/Booth
+    Repo: https://github.com/NDex30/Booth
+  Issues: https://github.com/NDex30/Booth/issues
  */
 window.Booth = function(el, options) {
   el = document.getElementById(el);
