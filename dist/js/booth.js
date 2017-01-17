@@ -48,7 +48,7 @@ window.Booth.prototype.options = {
   contentid: null,
   closebtnid: null,
   menuwrapid: null,
-	speed : 300,
+	speed : 400,
   clickWait: 500,
 };
 window.Booth.prototype.init = function(){
