@@ -1,4 +1,12 @@
-
+/*
+  Booth JS
+ Version: 0.1.1
+  Author: NDex30
+ Website: https://ndex30.github.io/
+    Docs: https://github.com/NDex30/Booth
+    Repo: https://github.com/NDex30/Booth
+  Issues: https://github.com/NDex30/Booth/issues
+ */
 .booth-menu { background: #373a47 none repeat scroll 0 0; font-size: 1.15em; height: 100%; padding: 2.5em 1.5em 0; position: absolute; transition: transform 0.4s cubic-bezier(0.7, 0, 0.3, 1) 0s; -webkit-transition: transform 0.4s cubic-bezier(0.7, 0, 0.3, 1) 0s; width: 300px; z-index: 1001; visibility: hidden; top: 0; }
 .booth-menu.booth-active { transition: transform 0.8s cubic-bezier(0.7, 0, 0.3, 1) 0s; -webkit-transition: transform 0.8s cubic-bezier(0.7, 0, 0.3, 1) 0s; }
 .booth-menu-button { border: none; background: pink; position: relative; font-size: 1.5rem; display: block; z-index: 100; }
