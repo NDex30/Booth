@@ -87,7 +87,7 @@ window.Booth.prototype.initEvents = function(){
     }
   } );
 
-  this.transitionEvent && this.menuWrap.addEventListener(this.transitionEvent, function() {
+  this.menuWrap.addEventListener(this.transitionEvent, function(d) {
     if(this.classList.contains("booth-menu") && !this.classList.contains("booth-active")){
       this.style.visibility = "hidden";
     }
@@ -95,26 +95,33 @@ window.Booth.prototype.initEvents = function(){
   });
 }
 window.Booth.prototype.toggleMenu = function(){
+  var self = this;
   if( this.isOpen ) {
-    if(this.has3d){
-      this.menuWrap.classList.remove('booth-active');
-      this.mainContent.classList.remove('booth-active');
-      this.mainContent.classList.remove('booth-content-'+this.options.location);
-    }else {
-      alert("Please try an updated browser!");
-    }
+    self.closeMenu();
   }
   else {
-    this.menuWrap.style.visibility = "visible";
-    if(this.has3d){
-      this.mainContent.classList.add('booth-content-'+this.options.location);
-      this.mainContent.classList.add('booth-active');
-      this.menuWrap.classList.add('booth-active');
-    }else{
-      alert("Please try an updated browser!");
-    }
+    self.openMenu();
   }
   this.isOpen = !this.isOpen;
+};
+window.Booth.prototype.openMenu = function(){
+  this.menuWrap.style.visibility = "visible";
+  if(this.has3d){
+    this.mainContent.classList.add('booth-content-'+this.options.location);
+    this.mainContent.classList.add('booth-active');
+    this.menuWrap.classList.add('booth-active');
+  }else{
+    alert("Please try an updated browser!");
+  }
+};
+window.Booth.prototype.closeMenu = function(){
+  if(this.has3d){
+    this.menuWrap.classList.remove('booth-active');
+    this.mainContent.classList.remove('booth-active');
+    this.mainContent.classList.remove('booth-content-'+this.options.location);
+  }else {
+    alert("Please try an updated browser!");
+  }
 };
 window.Booth.prototype.check3d = function(){
   if (!window.getComputedStyle) {
