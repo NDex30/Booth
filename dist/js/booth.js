@@ -105,6 +105,7 @@
    this.isOpen = !this.isOpen;
  };
  window.Booth.prototype.openMenu = function(){
+   this.bodyEl.style.overflow = "hidden";
    this.menuWrap.style.visibility = "visible";
    if(this.has3d){
      this.mainContent.classList.add('booth-content-'+this.options.location);
@@ -122,6 +123,7 @@
    }else {
      alert("Please try an updated browser!");
    }
+   this.bodyEl.style.overflow = "";
  };
  window.Booth.prototype.check3d = function(){
    if (!window.getComputedStyle) {
